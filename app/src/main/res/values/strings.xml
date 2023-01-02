@@ -1,12 +1,11 @@
 <resources>
-    <string name="app_name">AtHome</string>
+    <string name="app_name">&#64;Home</string>
     <string name="navigation_drawer_open">Open navigation drawer</string>
     <string name="navigation_drawer_close">Close navigation drawer</string>
     <string name="nav_header_title">AtHome (for Android)</string>
     <string name="nav_header_subtitle">ouremail@ourdomain.com</string>
     <string name="nav_header_desc">Navigation header</string>
     <string name="action_settings">Settings</string>
-
     <string name="menu_home">Home</string>
     <string name="menu_arrangements">Arrangements</string>
     <string name="menu_offers">Offers</string>
@@ -15,4 +14,29 @@
     <string name="fragment_booking">Booking</string>
     <string name="action_about">About</string>
     <string name="action_copyright">View Copyright Notice</string>
+    <string name="title_activity_settings">Settings</string>
+    <string name="settings_enable_notifications_checkbox_button">Enable Notifications</string>
+    <string name="settings_title_app_text">App Settings</string>
+    <string name="settings_title_account_text">Account Settings</string>
+    <string name="title_about_page_header">About Us</string>
+    <string name="title_about_page_app">About This App</string>
+    <string name="content_about_page_app">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Sit amet consectetur adipiscing elit pellentesque habitant morbi tristique. Consequat interdum varius sit amet mattis vulputate enim nulla aliquet. Blandit massa enim nec dui nunc. Volutpat sed cras ornare arcu dui vivamus. Cursus turpis massa tincidunt dui ut. Eget mi proin sed libero enim sed faucibus turpis. Amet cursus sit amet dictum sit amet. Lacus viverra vitae congue eu consequat ac. Rhoncus dolor purus non enim praesent elementum. Nunc congue nisi vitae suscipit. Blandit turpis cursus in hac habitasse platea dictumst quisque sagittis. Mauris cursus mattis molestie a iaculis. Nisl purus in mollis nunc. Adipiscing at in tellus integer feugiat. A pellentesque sit amet porttitor eget dolor morbi. Ut eu sem integer vitae justo eget magna fermentum. Euismod lacinia at quis risus sed.</string>
+    <string name="title_about_page_team">About Our Team</string>
+    <string name="content_about_page_team">Feugiat scelerisque varius morbi enim nunc faucibus a. Massa massa ultricies mi quis. Egestas pretium aenean pharetra magna. Posuere ac ut consequat semper viverra nam libero. Hendrerit gravida rutrum quisque non. Faucibus purus in massa tempor nec feugiat nisl pretium. Eget nunc lobortis mattis aliquam faucibus purus in massa. Mollis aliquam ut porttitor leo. Sed faucibus turpis in eu mi bibendum neque egestas. Et malesuada fames ac turpis egestas maecenas pharetra convallis posuere. Nullam eget felis eget nunc lobortis mattis aliquam faucibus. Tortor dignissim convallis aenean et tortor at risus viverra adipiscing. Sed vulputate mi sit amet mauris commodo. Purus in massa tempor nec feugiat nisl. Quis imperdiet massa tincidunt nunc pulvinar sapien et ligula ullamcorper. Ut placerat orci nulla pellentesque. Donec adipiscing tristique risus nec feugiat in fermentum.</string>
+    <string name="home_title_header_text">@string/app_name</string>
+    <string name="booking_button_book_now">Book a new Arrangement Now</string>
+    <string name="title_arrangements_header_text">Booked Arrangements</string>
+    <string name="title_arrangements_header_description_text">View Booked Arrangements. Specify lookup parameters: PENDING, CANCELLED, COMPLETED, ANY</string>
+    <string name="product_hairdresser_male_haircut">Male Haircut</string>
+    <string name="product_hairdresser_female_haircut">Female Haircut</string>
+    <string name="product_hairdresser_hair_coloring">Hair Paint</string>
+    <string name="product_hairdresser_hair_highlight">Hair Highlight</string>
+    <string name="product_hairdresser_attachment">Attachment</string>
+    <string-array name="arrangements_lookup_options">
+        <item>Pending</item>
+        <item>Cancelled</item>
+        <item>Completed</item>
+        <item>Any</item>
+    </string-array>
+
 </resources>

@@ -1,10 +1,12 @@
-package com.example.athome;
+package com.example.athome.activities;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.MenuItem;
 import android.view.View;
 import android.view.Menu;
 
+import com.example.athome.R;
 import com.google.android.material.snackbar.Snackbar;
 import com.google.android.material.navigation.NavigationView;
 
@@ -23,10 +25,16 @@ public class MainActivity extends AppCompatActivity {
     private AppBarConfiguration mAppBarConfiguration;
     private ActivityMainBinding binding;
 
+    private static MainActivity singletonInstance;
+
+    public static MainActivity GetSingletonInstance() {
+        return singletonInstance;
+    }
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-
+        singletonInstance = this;
         binding = ActivityMainBinding.inflate(getLayoutInflater());
         setContentView(binding.getRoot());
 
@@ -34,8 +42,12 @@ public class MainActivity extends AppCompatActivity {
         binding.appBarMain.fab.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+                /*
                 Snackbar.make(view, "[WIP]", Snackbar.LENGTH_LONG)
                         .setAction("Action", null).show();
+                        */
+
+                MainActivity.this.startActivity(new Intent(MainActivity.this, BookNewArrangementActivity.class));
             }
         });
         binding.appBarMain.toolbar.setOnMenuItemClickListener(new Toolbar.OnMenuItemClickListener() {
@@ -43,6 +55,12 @@ public class MainActivity extends AppCompatActivity {
             public boolean onMenuItemClick(MenuItem item) {
                 switch(item.getItemId()) {
                     case R.id.action_settings:
+                        MainActivity.this.startActivity(new Intent(MainActivity.this, SettingsActivity.class));
+                        return true;
+                    case R.id.action_about:
+                        MainActivity.this.startActivity(new Intent(MainActivity.this, AboutActivity.class));
+                        return true;
+                    case R.id.action_copyright:
 
                         return true;
                     default:

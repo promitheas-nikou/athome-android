@@ -45,9 +45,11 @@ public class OffersFragment extends Fragment {
         binding = FragmentOffersBinding.inflate(inflater, container, false);
         View root = binding.getRoot();
         cardContainerLayout = binding.offersCardContainerLinearLayout;
-        AddCardView(new ProfessionalSuggestionData("TITLE123","NAME","COST", ProfessionalType.HAIRDRESSER));
-        AddCardView(new ProfessionalSuggestionData("TITLE456","NAME","COST", ProfessionalType.HAIRDRESSER));
-        AddCardView(new ProfessionalSuggestionData("<b>TITLE789</b>","NAME","COST", ProfessionalType.HAIRDRESSER));
+        AddCardView(new ProfessionalSuggestionData("TITLE123","COST", ProfessionalType.HAIRDRESSER));
+        AddCardView(new ProfessionalSuggestionData("TITLE456","COST", ProfessionalType.HAIRDRESSER));
+        AddCardView(new ProfessionalSuggestionData("<b>TITLE789</b>","COST", ProfessionalType.HAIRDRESSER));
+        AddCardView(new ProfessionalSuggestionData("<b>TITLE789</b>","COST", ProfessionalType.HAIRDRESSER));
+        AddCardView(new ProfessionalSuggestionData("<b>TITLE789</b>","COST", ProfessionalType.HAIRDRESSER));
         return root;
     }
 

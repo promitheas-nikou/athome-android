@@ -1,10 +1,16 @@
 package com.example.athome.data;
 
-public class ProfessionalSuggestionData {
+import com.example.athome.ui.arrangements.ArrangementLookupOption;
+
+import java.util.List;
+
+public class ArrangementData {
     private String title;
     private String cost;
     private ProfessionalType type;
+    private ArrangementLookupOption option;
     private String typeString;
+    private List<HairdresserServices> servicesList;
 
     public String getTitle() {
         return title;
@@ -22,11 +28,21 @@ public class ProfessionalSuggestionData {
         return typeString;
     }
 
-    public ProfessionalSuggestionData(String title, String cost, ProfessionalType type, String typeString) {
+    public ArrangementLookupOption getOption() {
+        return option;
+    }
+
+    public List<HairdresserServices> getServicesList() {
+        return servicesList;
+    }
+
+    public ArrangementData(String title, String cost, ProfessionalType type, String typeString, ArrangementLookupOption option, List<HairdresserServices> servicesList) {
         this.title = title;
         this.cost = cost;
         this.type = type;
         this.typeString = typeString;
+        this.option = option;
+        this.servicesList = servicesList;
     }
 
     public static String professionalTypeToString(ProfessionalType type) {
@@ -35,9 +51,5 @@ public class ProfessionalSuggestionData {
                 return "Haidresser";
         }
         return "ERROR";
-    }
-
-    public ProfessionalSuggestionData(String title, String cost, ProfessionalType type) {
-        this(title,cost,type,professionalTypeToString(type));
     }
 }
