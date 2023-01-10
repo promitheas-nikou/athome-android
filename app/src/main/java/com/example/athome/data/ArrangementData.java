@@ -2,6 +2,7 @@ package com.example.athome.data;
 
 import com.example.athome.ui.arrangements.ArrangementLookupOption;
 
+import java.time.LocalDateTime;
 import java.util.List;
 
 public class ArrangementData {
@@ -11,6 +12,7 @@ public class ArrangementData {
     private ArrangementLookupOption option;
     private String typeString;
     private List<HairdresserServices> servicesList;
+    private LocalDateTime time;
 
     public String getTitle() {
         return title;
@@ -36,13 +38,16 @@ public class ArrangementData {
         return servicesList;
     }
 
-    public ArrangementData(String title, String cost, ProfessionalType type, String typeString, ArrangementLookupOption option, List<HairdresserServices> servicesList) {
+    public LocalDateTime getTime() { return time; }
+
+    public ArrangementData(String title, String cost, ProfessionalType type, String typeString, ArrangementLookupOption option, List<HairdresserServices> servicesList, LocalDateTime time) {
         this.title = title;
         this.cost = cost;
         this.type = type;
         this.typeString = typeString;
         this.option = option;
         this.servicesList = servicesList;
+        this.time = time;
     }
 
     public static String professionalTypeToString(ProfessionalType type) {

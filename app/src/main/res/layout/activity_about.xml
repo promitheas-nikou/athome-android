@@ -17,7 +17,7 @@
         android:layout_height="match_parent">
 
         <TextView
-            android:id="@+id/about_title_header_text"
+            android:id="@+id/hairdresser_arrangement_review_title"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="@string/title_about_page_header"
@@ -38,7 +38,7 @@
             android:textStyle="bold"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/about_title_header_text" />
+            app:layout_constraintTop_toBottomOf="@+id/hairdresser_arrangement_review_title" />
 
         <TextView
             android:id="@+id/content_about_page_app"

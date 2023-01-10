@@ -7,7 +7,6 @@ import android.view.View;
 import android.view.Menu;
 
 import com.example.athome.R;
-import com.google.android.material.snackbar.Snackbar;
 import com.google.android.material.navigation.NavigationView;
 
 import androidx.appcompat.widget.Toolbar;
@@ -47,7 +46,7 @@ public class MainActivity extends AppCompatActivity {
                         .setAction("Action", null).show();
                         */
 
-                MainActivity.this.startActivity(new Intent(MainActivity.this, BookNewArrangementActivity.class));
+                MainActivity.this.startActivity(new Intent(MainActivity.this, BookNewHairdresserArrangementActivity.class));
             }
         });
         binding.appBarMain.toolbar.setOnMenuItemClickListener(new Toolbar.OnMenuItemClickListener() {

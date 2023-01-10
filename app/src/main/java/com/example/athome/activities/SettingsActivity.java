@@ -4,6 +4,7 @@ import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
+import android.widget.Button;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
@@ -18,6 +19,8 @@ import com.example.athome.databinding.ActivitySettingsBinding;
 import com.google.android.material.navigation.NavigationView;
 import com.google.android.material.snackbar.Snackbar;
 
+import java.io.File;
+
 public class SettingsActivity  extends AppCompatActivity {
     private AppBarConfiguration mAppBarConfiguration;
     private ActivitySettingsBinding binding;
@@ -27,7 +30,18 @@ public class SettingsActivity  extends AppCompatActivity {
         super.onCreate(savedInstanceState);
 
         binding = ActivitySettingsBinding.inflate(getLayoutInflater());
-        setContentView(binding.getRoot());
+        View root = binding.getRoot();
+        Button b = (Button)root.findViewById(R.id.settings_invalidate_manifest_button);
+        b.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                File outputDir = MainActivity.GetSingletonInstance().getCacheDir();
+                File manifestFile = new File(outputDir, "manifest.json");
+                if(manifestFile.exists())
+                    manifestFile.delete();
+            }
+        });
+        setContentView(root);
     }
 
 }
