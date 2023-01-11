@@ -21,11 +21,11 @@ jobs:
       - name: Build Project
         run: ./gradlew assemble
 
-      - name: Build Debug APK
-        run: ./gradlew :app:assembleDebug
-
       - name: build release
         run: ./gradlew assembleRelease
+        
+      - name: Prepare for Upload
+        run: echo ${{ github.workspace}} ; mkdir -p ${{ github.workspace}} /app/build/outputs/apk/release/
 
       - name: Upload APK
         uses: actions/upload-artifact@v2
