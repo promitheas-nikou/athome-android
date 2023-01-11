@@ -25,10 +25,10 @@ jobs:
         run: ./gradlew assembleRelease
         
       - name: Prepare for Upload
-        run: echo ${{ github.workspace}} ; mkdir -p ${{ github.workspace}} /app/build/outputs/apk/release/
+        run: mkdir -p ${{ github.workspace}}/app/build/outputs/apk/release/
 
       - name: Upload APK
         uses: actions/upload-artifact@v2
         with:
           name: App
-          path: ${{ github.workspace}} /app/build/outputs/apk/release/app-release.apk
+          path: ${{ github.workspace}}/app/build/outputs/apk/release/app-release.apk
