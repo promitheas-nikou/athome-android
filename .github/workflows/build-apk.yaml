@@ -1,4 +1,5 @@
-- uses: sparkfabrik/android-build-action@v1.0.0
+on: [push]
+uses: sparkfabrik/android-build-action@v1.0.0
   with:
     project-path: android
     output-path: my-app.apk
