@@ -7,28 +7,8 @@ on:
 jobs:
   build:
     runs-on: ubuntu-latest
-
     steps:
-      - uses: actions/checkout@v2
-      - name: set up JDK 11
-        uses: actions/setup-java@v1
-        with:
-          java-version: 11
-        
-      - name: Configure Gradle
-        run: chmod +x ./gradlew
-      
-      - name: Build Project
-        run: ./gradlew assemble
-
-      - name: build release
-        run: ./gradlew assembleRelease
-        
-      - name: Prepare for Upload
-        run: mkdir -p ${{ github.workspace}}/app/build/outputs/apk/release/
-
-      - name: Upload APK
-        uses: actions/upload-artifact@v2
-        with:
-          name: App
-          path: ${{ github.workspace}}/app/build/outputs/apk/release/app-release.apk
+      - name: Checkout the code
+        uses: actions/checkout@v2
+      - name: Build the app
+        run: chmod +x ./gradlew ; ./gradlew build
