@@ -1,0 +1,209 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+<androidx.constraintlayout.widget.ConstraintLayout
+
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <TextView
+        android:id="@+id/book_new_arrangement_title_header"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/title_book_new_hairdresser_arrangement_header"
+        android:textAlignment="center"
+        android:textSize="30sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias=".5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/book_new_arrangement_name_lookup_option_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dp"
+        android:text="@string/text_book_new_hairdresser_arrangement_name_header"
+        android:textSize="20sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.487"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/book_new_arrangement_text_view_count_hair_attachment_name" />
+
+    <EditText
+        android:id="@+id/book_new_arrangement_name_lookup_option_plaintextin"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:ems="10"
+        android:hint="Name to lookup (leave empty to ignore)"
+        android:inputType="textPersonName"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/book_new_arrangement_name_lookup_option_text" />
+
+    <TextView
+        android:id="@+id/book_new_arrangement_max_price_textview"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:text="TextView"
+        android:textSize="20sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/book_new_arrangement_name_lookup_option_plaintextin" />
+
+    <SeekBar
+        android:id="@+id/book_new_arrangement_max_price_seekbar"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/book_new_arrangement_max_price_textview" />
+
+    <Button
+        android:id="@+id/book_new_arrangement_find_results_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="40dp"
+        android:text="@string/text_book_new_hairdresser_arrangement_lookup_button"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/book_new_arrangement_max_price_seekbar" />
+
+    <TextView
+        android:id="@+id/book_new_arrangement_text_view_count_male_haircut_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="25dp"
+        android:text="@string/product_hairdresser_male_haircut"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/book_new_arrangement_title_header" />
+
+    <TextView
+        android:id="@+id/book_new_arrangement_text_view_count_female_haircut_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="25dp"
+        android:text="@string/product_hairdresser_female_haircut"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/book_new_arrangement_text_view_count_male_haircut_name" />
+
+    <TextView
+        android:id="@+id/book_new_arrangement_text_view_count_child_haircut_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="25dp"
+        android:text="@string/product_hairdresser_child_haircut"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/book_new_arrangement_text_view_count_female_haircut_name" />
+
+    <TextView
+        android:id="@+id/book_new_arrangement_text_view_count_hair_coloring_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="25dp"
+        android:text="@string/product_hairdresser_hair_coloring"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/book_new_arrangement_text_view_count_child_haircut_name" />
+
+    <TextView
+        android:id="@+id/book_new_arrangement_text_view_count_hair_highlight_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="25dp"
+        android:text="@string/product_hairdresser_hair_highlight"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/book_new_arrangement_text_view_count_hair_coloring_name" />
+
+    <TextView
+        android:id="@+id/book_new_arrangement_text_view_count_hair_attachment_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="25dp"
+        android:text="@string/product_hairdresser_attachment"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/book_new_arrangement_text_view_count_hair_highlight_name" />
+
+    <EditText
+        android:id="@+id/book_new_arrangement_num_in_count_male_haircut"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:inputType="numberDecimal"
+        android:text="0"
+        app:layout_constraintBottom_toBottomOf="@+id/book_new_arrangement_text_view_count_male_haircut_name"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/book_new_arrangement_text_view_count_male_haircut_name" />
+
+    <EditText
+        android:id="@+id/book_new_arrangement_num_in_count_female_haircut"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:inputType="numberDecimal"
+        android:text="0"
+        app:layout_constraintBottom_toBottomOf="@+id/book_new_arrangement_text_view_count_female_haircut_name"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/book_new_arrangement_text_view_count_female_haircut_name" />
+
+    <EditText
+        android:id="@+id/book_new_arrangement_num_in_count_child_haircut"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:inputType="numberDecimal"
+        android:text="0"
+        app:layout_constraintBottom_toBottomOf="@+id/book_new_arrangement_text_view_count_child_haircut_name"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/book_new_arrangement_text_view_count_child_haircut_name" />
+
+    <EditText
+        android:id="@+id/book_new_arrangement_num_in_count_hair_coloring"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:inputType="numberDecimal"
+        android:text="0"
+        app:layout_constraintBottom_toBottomOf="@+id/book_new_arrangement_text_view_count_hair_coloring_name"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/book_new_arrangement_text_view_count_hair_coloring_name" />
+
+    <EditText
+        android:id="@+id/book_new_arrangement_num_in_count_hair_highlight"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:inputType="numberDecimal"
+        android:text="0"
+        app:layout_constraintBottom_toBottomOf="@+id/book_new_arrangement_text_view_count_hair_highlight_name"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/book_new_arrangement_text_view_count_hair_highlight_name" />
+
+    <EditText
+        android:id="@+id/book_new_arrangement_num_in_count_hair_attachment"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:inputType="numberDecimal"
+        android:text="0"
+        app:layout_constraintBottom_toBottomOf="@+id/book_new_arrangement_text_view_count_hair_attachment_name"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/book_new_arrangement_text_view_count_hair_attachment_name" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
+    </LinearLayout>
+</ScrollView>
