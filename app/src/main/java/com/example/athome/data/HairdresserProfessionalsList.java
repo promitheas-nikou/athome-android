@@ -5,7 +5,9 @@ import org.json.JSONException;
 import org.json.JSONObject;
 
 import java.util.ArrayList;
+import java.util.Collection;
 import java.util.HashMap;
+import java.util.List;
 import java.util.Map;
 
 public class HairdresserProfessionalsList {
@@ -20,7 +22,7 @@ public class HairdresserProfessionalsList {
             for (int i = 0; i < array.length(); i++) {
                 JSONObject obj = array.getJSONObject(i);
                 JSONArray serv = obj.getJSONArray("services");
-                ArrayList<HairdresserProvidedServiceData> servList = new ArrayList<>();
+                HashMap<HairdresserServices, HairdresserProvidedServiceData> servMap = new HashMap<>();
                 for (int j = 0; j < serv.length(); j++) {
                     JSONObject servObj = serv.getJSONObject(j);
                     String servID = servObj.getString("type");
@@ -32,6 +34,9 @@ public class HairdresserProfessionalsList {
                         case "female_haircut":
                             serviceType = HairdresserServices.FEMALE_HAIRCUT;
                             break;
+                        case "child_haircut":
+                            serviceType = HairdresserServices.CHILD_HAIRCUT;
+                            break;
                         case "hair_coloring":
                             serviceType = HairdresserServices.HAIR_COLORING;
                             break;
@@ -41,10 +46,12 @@ public class HairdresserProfessionalsList {
                         case "hair_highlight":
                             serviceType = HairdresserServices.HAIR_HIGHLIGHT;
                             break;
+                        default:
+                            continue;
                     }
-                    servList.add(new HairdresserProvidedServiceData(serviceType, servObj.getInt("price")));
+                    servMap.put(serviceType, new HairdresserProvidedServiceData(serviceType, servObj.getInt("price")));
                 }
-                HairdresserProfessionalDescriptionData data = new HairdresserProfessionalDescriptionData(obj.getString("name"), obj.getString("id"), obj.getString("imageID"), servList);
+                HairdresserProfessionalDescriptionData data = new HairdresserProfessionalDescriptionData(obj.getString("name"), obj.getString("id"), obj.getString("imageID"), servMap);
                 dataMap.put(obj.getString("id"), data);
             }
         }
@@ -53,7 +60,10 @@ public class HairdresserProfessionalsList {
         }
     }
 
-    static HairdresserProfessionalDescriptionData GetData(String id) {
+    public static HairdresserProfessionalDescriptionData GetData(String id) {
         return dataMap.get(id);
+    }
+    public static Collection<HairdresserProfessionalDescriptionData> GetProfessionalList() {
+        return dataMap.values();
     }
 }

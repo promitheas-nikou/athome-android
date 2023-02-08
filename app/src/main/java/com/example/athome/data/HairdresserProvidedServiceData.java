@@ -13,7 +13,7 @@ public class HairdresserProvidedServiceData {
         return service;
     }
 
-    public float getCost() {
+    public int getCost() {
         return cost;
     }
 }

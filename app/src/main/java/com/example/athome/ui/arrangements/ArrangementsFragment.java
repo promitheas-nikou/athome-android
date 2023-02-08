@@ -16,6 +16,7 @@ import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.cardview.widget.CardView;
 import androidx.fragment.app.Fragment;
+import androidx.fragment.app.FragmentTransaction;
 import androidx.lifecycle.ViewModelProvider;
 
 import com.example.athome.R;
@@ -36,7 +37,7 @@ public class ArrangementsFragment extends Fragment {
         TextView titleTextView = cardView.findViewById(R.id.card_title_text);
         titleTextView.setText(Html.fromHtml(data.getTitle()));
         TextView priceTextView = cardView.findViewById(R.id.card_price_text);
-        priceTextView.setText(Html.fromHtml(data.getCost()));
+        priceTextView.setText(Html.fromHtml(String.format("%.2f",data.getCost()/100.f)));
         TextView typeTextView = cardView.findViewById(R.id.card_type_text);
         typeTextView.setText(Html.fromHtml(data.getTypeString()+" ("+data.getOption().name()+")"));
         cardContainerLayout.addView(cardView);

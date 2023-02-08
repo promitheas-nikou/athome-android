@@ -7,7 +7,7 @@ import java.util.List;
 
 public class ArrangementData {
     private String title;
-    private String cost;
+    private int cost;
     private ProfessionalType type;
     private ArrangementLookupOption option;
     private String typeString;
@@ -18,7 +18,7 @@ public class ArrangementData {
         return title;
     }
 
-    public String getCost() {
+    public int getCost() {
         return cost;
     }
 
@@ -40,7 +40,7 @@ public class ArrangementData {
 
     public LocalDateTime getTime() { return time; }
 
-    public ArrangementData(String title, String cost, ProfessionalType type, String typeString, ArrangementLookupOption option, List<HairdresserServices> servicesList, LocalDateTime time) {
+    public ArrangementData(String title, int cost, ProfessionalType type, String typeString, ArrangementLookupOption option, List<HairdresserServices> servicesList, LocalDateTime time) {
         this.title = title;
         this.cost = cost;
         this.type = type;

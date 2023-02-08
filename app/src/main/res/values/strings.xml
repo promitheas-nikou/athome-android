@@ -30,13 +30,25 @@
     <string name="title_arrangements_header_description_text">View Booked Arrangements. Specify lookup parameters: PENDING, CANCELLED, COMPLETED, ANY</string>
     <string name="product_hairdresser_male_haircut">Male Haircut</string>
     <string name="product_hairdresser_female_haircut">Female Haircut</string>
+    <string name="product_hairdresser_child_haircut">Child Haircut</string>
     <string name="product_hairdresser_hair_coloring">Hair Paint</string>
     <string name="product_hairdresser_hair_highlight">Hair Highlight</string>
     <string name="product_hairdresser_attachment">Attachment</string>
     <string name="hairdresser_arrangement_review_title">Hairdresser Arrangement Review</string>
+    <string name="hairdresser_arrangement_finalization_title">Hairdresser Arrangement Finalization</string>
+    <string name="hairdresser_arrangement_finalization_button_text">Book Arrangement</string>
+    <string name="hairdresser_arrangement_booking_completion_title">Hairdresser Arrangement Booking Completion</string>
     <string name="title_book_new_hairdresser_arrangement_header">Book New Hairdresser Arrangement</string>
     <string name="text_book_new_hairdresser_arrangement_name_header">Name To Look Up (leave empty to ignore)</string>
     <string name="text_book_new_hairdresser_arrangement_lookup_button">Find Results</string>
+    <string name="text_book_new_hairdresser_arrangement_select_date_button">Select Date</string>
+    <string name="general_text_price_label">Price</string>
+    <string name="general_text_date_label">Date</string>
+    <string name="general_text_time_label">Time</string>
+    <string name="general_text_name_label">Name</string>
+    <string name="general_text_type_label">Type</string>
+    <string name="general_text_category_label">Category</string>
+    <string name="general_text_occupation_label">Occupation</string>
     <string-array name="arrangements_lookup_options">
         <item>Pending</item>
         <item>Cancelled</item>
